@@ -12,10 +12,12 @@ describe('Cells', () => {
     var noValueCell = new Cell(0,0, );
     expect(noValueCell.checkValue()).toEqual();
   });
+
   test('should return "not a valid input" error when the input is not a number from 1-9', function(){
     var letterCell = new Cell(0,0,"a");
     expect(letterCell.checkValue()).toEqual("not a valid input");
   });
+
   test('should return the value when the input is a number from 1-9', () => {
     var cell = new Cell(0,0,8);
     expect(cell.checkValue()).toEqual(8);
@@ -43,7 +45,7 @@ describe('Row', () => {
   });
 });
 
-describe('Cell',() => {
+describe('Column',() => {
  test('should return true if cell values do not repeat themselves',() =>{
  var puzzle = new Puzzle ();
  puzzle.autofillPuzzle();
